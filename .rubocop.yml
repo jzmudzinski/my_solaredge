@@ -1,0 +1,35 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0
+
+Layout/EndOfLine:
+  Enabled: False
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 120
+
+Lint/ScriptPermission:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+
+Style/BlockDelimiters:
+  IgnoredMethods: ["subject"]
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
