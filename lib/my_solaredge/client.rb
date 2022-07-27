@@ -5,7 +5,7 @@ require 'httparty'
 module MySolaredge
   # The main object from where everything else happens
   class Client
-    IMPLEMENTED_ENDPOINTS = %i[energy sites].freeze
+    IMPLEMENTED_ENDPOINTS = %i[energy energy_details power overview sites time_frame_energy].freeze
 
     def initialize(credentials_source)
       @credentials_source = credentials_source

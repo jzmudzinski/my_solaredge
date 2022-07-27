@@ -21,6 +21,10 @@ Metrics/BlockLength:
 Style/BlockDelimiters:
   IgnoredMethods: ["subject"]
 
+Style/Documentation:
+  Exclude:
+    - "lib/my_solaredge/response/**/*" # they are so straightforward...
+
 Style/StringLiterals:
   Enabled: false
 
