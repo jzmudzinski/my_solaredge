@@ -72,6 +72,11 @@ module MySolaredge
       MySolaredge::Response::TimeFrameEnergy.new(request.call)
     end
 
+    def current_power_flow(options = {})
+      request = MySolaredge::Request::CurrentPowerFlow.new(api_key, site_id, options)
+      MySolaredge::Response::CurrentPowerFlow.new(request.call)
+    end
+
     private
 
     def camelize(string)
