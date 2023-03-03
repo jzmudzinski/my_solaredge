@@ -25,17 +25,12 @@ module MySolaredge
 
     IMPLEMENTED_ENDPOINTS.each do |endpoint|
       define_method endpoint.to_s do |options = {}|
-        klass = Object.const_get("MySolaredge::Request::#{camelize(endpoint)}")
+        klass = Object.const_get("MySolaredge::Request::#{endpoint.camelize}")
         request = klass.new(api_key, site_id, options)
-        response_klass = Object.const_get("MySolaredge::Response::#{camelize(endpoint)}")
+        response_klass = Object.const_get("MySolaredge::Response::#{endpoint.camelize}")
         response_klass.new(request.call)
       end
     end
 
-    private
-
-    def camelize(string)
-      string.to_s.split('_').collect(&:capitalize).join
-    end
   end
 end
